@@ -91,19 +91,25 @@
 		</dependency>
 		
 	</dependencies>
-	
+	<repositories>
+	<repository>
+	<id>nexus</id>
+	<url>http://13.233.134.214:8081/repository/Amazon_release/</url>
+	</repository>
+	</repositories>
+
 	<distributionManagement>
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://35.154.225.119:8081/repository/paytm-relases/</url>
+	      <name>flipkart-Release</name>
+	      <url>http://13.233.134.214:8081/repository/Flipkart_release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://35.154.225.119:8081/repository/paytm-snapshot/</url>
+	      <name>flipkart-snapshot</name>
+	      <url>http://13.233.134.214:8081/repository/Flipkar_snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
