@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
 	
 	<name>maven-web-application</name>
 
@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://35.154.226.84:9000</sonar.host.url>
+		<sonar.host.url>13.233.247.136:9000</sonar.host.url>
 		<sonar.login>f29b5b2939cb6e0f6f807581fbc1b0ac20baaf04</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -94,7 +94,7 @@
 	<repositories>
 	<repository>
 	<id>nexus</id>
-	<url>http://52.66.123.2:8081/repository/Amazon_release/</url>
+	<url>http://13.127.88.201:8081/repository/Amazon_release/</url>
 	</repository>
 	</repositories>
 
@@ -103,13 +103,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>flipkart-Release</name>
-	      <url>http://52.66.123.2:8081/repository/Flipkart_release/</url>
+	      <url>http://13.127.88.201:8081/repository/Flipkart_release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>flipkart-snapshot</name>
-	      <url>http://52.66.123.2:8081/repository/Flipkar_snapshot/</url>
+	      <url>http://13.127.88.201:8081/repository/Flipkar_snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
