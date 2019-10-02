@@ -109,7 +109,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>flipkart-snapshot</name>
-	      <url>http://15.206.28.215:8081/repository/Paytm-Release/</url>
+	      <url>http://15.206.28.215:8081/repository/paytm-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
