@@ -21,8 +21,8 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>13.233.247.136:9000</sonar.host.url>
-		<sonar.login>f29b5b2939cb6e0f6f807581fbc1b0ac20baaf04</sonar.login>
+		<sonar.host.url>http://13.127.9.202:9000</sonar.host.url>
+		<sonar.login>2bfd8075a1d29616e2e137b651e668e4f8753a66</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -94,7 +94,7 @@
 	<repositories>
 	<repository>
 	<id>nexus</id>
-	<url>http://13.127.88.201:8081/repository/Amazon_release/</url>
+	<url>http://15.206.28.215:8081/repository/paytm-proxy/</url>
 	</repository>
 	</repositories>
 
@@ -103,13 +103,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>flipkart-Release</name>
-	      <url>http://13.127.88.201:8081/repository/Flipkart_release/</url>
+	      <url>http://15.206.28.215:8081/repository/Paytm-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>flipkart-snapshot</name>
-	      <url>http://13.127.88.201:8081/repository/Flipkar_snapshot/</url>
+	      <url>http://15.206.28.215:8081/repository/Paytm-Release/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
