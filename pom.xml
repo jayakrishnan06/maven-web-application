@@ -94,7 +94,7 @@
 	<repositories>
 	<repository>
 	<id>nexus</id>
-	<url>http://15.206.28.215:8081/repository/paytm-proxy/</url>
+	<url>http://13.233.230.150:8081/repository/paytm-proxy/</url>
 	</repository>
 	</repositories>
 
