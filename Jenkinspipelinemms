@@ -1,5 +1,4 @@
-node('paytmNode')
-{
+node {
     
     echo "GitHub BranhName ${env.BRANCH_NAME}"
   echo "Jenkins Job Number ${env.BUILD_NUMBER}"
@@ -16,43 +15,37 @@ node('paytmNode')
        ])
      ])
   
-  def mavenHome=tool name: "maven3.6.2", type: "maven" 
+    def mavenHome=tool name: "maven_3.6.2", type: "maven"
     
- stage('Checkout')
+    stage('checkout') {
+        git branch: 'development', credentialsId: '10b66c82-1394-4f5a-abb0-146a3b38ce42', url: 'https://github.com/jayakrishnan06/maven-web-application.git'
+    }
+
+    stage('build'){
+        sh "${mavenHome}/bin/mvn clean package"
+    }
+    
+         stage('SonarQubeReport')
  {
-  git branch: 'development', credentialsId: '0f274b35-ba13-48f8-b4ea-cc11beace470', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
-
- }
- 
- /*
- stage('Build'){
- sh "${mavenHome}/bin/mvn clean package"
- }  
- 
- stage('SonarQubeReport'){
- sh "${mavenHome}/bin/mvn sonar:sonar"
- }
- 
- stage('UploadArfifactintoNexus'){
- sh "${mavenHome}/bin/mvn deploy"
+  sh  "${mavenHome}/bin/mvn sonar:sonar"
  }
 
-stage('DeployAppIntoTomcat'){
- sshagent(['2df2f727-417c-4e1b-8b48-a6c109440ac5']) {
- 
- sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.233.103.234:/opt/apache-tomcat-9.0.24/webapps/maven-web-application.war"  
-	
+  stage('UploadArtifactsIntoNexus')
+ {
+  sh  "${mavenHome}/bin/mvn deploy"
  }
+ stage('deployAppTomcat')
+{
+    sshagent(['2e20cd89-b666-44df-b987-f025b9f2e4cf']) {
+sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.232.185.135:/opt/apache-tomcat-9.0.26/webapps/maven-web-application.war"
+}    
 }
-*/
 
-stage('EmailNotification'){
- emailext body: '''Build is over!!
+stage('emailnotification')
+{
+    emailext body: '''Build completed 
+Regards,
+jk''', subject: '${env.JOB_NAME} Completed successfuly', to: 'jskitcha@gmail.com,'
 
- Regards,
- MSS,
- Bangalore,
- 9980923226.''', subject: 'Build is Over - MSS', to: 'devopstrainingblr@gmal.com'
- }
-
+}
 }
