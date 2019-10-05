@@ -48,6 +48,4 @@ Regards,
 jk''', subject: '${env.JOB_NAME} Completed successfuly', to: 'jskitcha@gmail.com,'
 
 }
-echo 'Hi the build completed successfuly'
-
 }
