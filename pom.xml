@@ -58,13 +58,6 @@
     </dependency>
   </dependencies>
          
-       <repositories>
-	<repository>
-	<id>nexus</id>
-	<url>http://13.127.251.76:8081/repository/ProxyRepo/</url>
-	</repository>
-	</repositories>
-
 	<distributionManagement>
 	
 	    <repository>
